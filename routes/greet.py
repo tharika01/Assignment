@@ -7,8 +7,6 @@ from celery.result import AsyncResult
 from celery.states import PENDING, STARTED, SUCCESS, FAILURE, RETRY
 
 router = APIRouter(prefix="/greet", tags=["Greet"])
-
-
 celery = Celery("tasks", broker="redis://redis:6379/0", backend="redis://redis:6379/0")
 
 
